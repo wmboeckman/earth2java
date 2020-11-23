@@ -102,7 +102,7 @@ public class EntitySpawnInit {
 
     private static void registerGlowingSquidSpawn(ModConfig.GlowSquidConfig config) {
         if (config.spawn) {
-            BiomeSpawnHelper.setWaterCreatureSpawnBiomes(EntityTypesInit.GLOW_SQUID_REGISTRY_OBJECT, config.glowSquid.spawnBiomes.toArray(new String[0]), config.glowSquid.weight, config.glowSquid.groupMin, config.glowSquid.groupMax);
+            BiomeSpawnHelper.setWaterCreatureSpawnBiomes(EntityTypesInit.GLOW_SQUID_REGISTRY_OBJECT, config.spawnBiomes.toArray(new String[0]), config.weight, config.groupMin, config.groupMax);
             SpawnRestrictionAccessor.callRegister(EntityTypesInit.GLOW_SQUID_REGISTRY_OBJECT, SpawnRestriction.Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, GlowSquidEntity::canGlowingSquidSpawn);
         }
     }
